@@ -1,0 +1,5 @@
+---
+title: Jack: A test
+date: 2026-11-04
+---
+Text
