@@ -1,0 +1,15 @@
+{% if page.photo %}<section class="page-hero">
+  <img class="page-hero__photo" src="{{ page.photo | relative_url }}" alt="{{ page.photo_alt }}">
+  <div class="wrap">
+    <div class="page-hero__panel">
+      <h1>{{ page.heading | default: page.title }}</h1>
+      {% if page.intro %}<p>{{ page.intro }}</p>{% endif %}
+      {% if page.button_text %}<a class="button button--light" href="{{ page.button_link | relative_url }}">{{ page.button_text }}</a>{% endif %}
+    </div>
+  </div>
+</section>{% else %}<section class="page-band">
+  <div class="wrap">
+    <h1>{{ page.heading | default: page.title }}</h1>
+    {% if page.intro %}<p>{{ page.intro }}</p>{% endif %}
+  </div>
+</section>{% endif %}

@@ -1,4 +1,32 @@
 ---
 layout: default
 ---
-{{ content }}
+{% include page-top.html %}
+{% assign parts = content | split: '<h2' %}
+{% for part in parts %}
+{% if forloop.first %}{% assign lead = part | strip %}{% if lead != '' %}<section class="band"><div class="wrap prose">{{ part }}</div></section>{% endif %}{% continue %}{% endif %}
+{% assign n = forloop.index0 %}
+{% assign pieces = part | split: '</h2>' %}
+{% assign heading = pieces[0] %}
+{% assign body = part | remove_first: heading | remove_first: '</h2>' %}
+{% if page.card_sections contains n or page.figure_sections contains n %}
+<section class="band band--tint">
+  <div class="wrap stack">
+    <h2{{ heading }}</h2>
+    {% assign cards = body | split: '<h3' %}
+    <div class="cards{% if page.figure_sections contains n %} cards--figures{% endif %}">
+      {% for card in cards %}{% if forloop.first %}{% continue %}{% endif %}<div class="card"><h3{{ card }}</div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% else %}
+<section class="band">
+  <div class="wrap split">
+    <h2{{ heading }}</h2>
+    <div class="split__body">{{ body }}</div>
+  </div>
+</section>
+{% endif %}
+{% endfor %}
+{% unless page.next_step == false %}{% include next-step.html %}{% endunless %}
