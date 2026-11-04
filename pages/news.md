@@ -7,7 +7,6 @@ intro: "Profiles of Inspire members and their businesses."
 list_heading: "Member spotlights"
 # Old web addresses that now lead to this page. Leave this list as it is.
 redirect_from:
-  - /guide-test-article/
   - /events/
   - /paella-at-jamon-jamon-bangkok/
   - /sunday-brunch-networking/
