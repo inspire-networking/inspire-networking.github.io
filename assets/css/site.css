@@ -119,6 +119,7 @@ a:hover { color: var(--green); }
   object-position: center 30%;
 }
 .page-hero__panel {
+  box-sizing: content-box;
   position: relative;
   display: grid;
   justify-items: start;
