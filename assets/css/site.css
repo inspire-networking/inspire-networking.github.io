@@ -198,6 +198,10 @@ a:hover { color: var(--green); }
 .site-footer strong { display: block; font-weight: 700; }
 .site-footer__nav { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 8px 22px; }
 .site-footer a { color: var(--tint); }
+.site-footer__inner { padding-bottom: 20px; }
+.site-credit { display: flex; align-items: center; justify-content: flex-end; gap: 8px; padding-block: 12px; color: var(--tint); font-size: 13px; }
+.site-credit::before { content: ""; flex: 1; height: 1px; margin-right: 12px; background: rgba(242, 246, 244, 0.2); }
+.site-credit img { display: block; width: auto; height: 30px; }
 
 .page-hero__photo {
   display: block;
