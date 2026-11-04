@@ -1,0 +1,18 @@
+# Details used across the whole site. Keep the quote marks around each value.
+meeting_day: "Friday"
+meeting_start: "06:30"
+meeting_end: "09:30"
+venue_name: "Mövenpick Hotel"
+venue_street: "47 Sukhumvit Soi 15"
+venue_area: "Khwaeng Khlong Toei Nuea, Khlong Toei, Bangkok 10110"
+venue_city: "Bangkok"
+guest_rule: "Guests are welcome at up to two meetings within six months."
+linkedin: "https://www.linkedin.com/company/inspire-networking/"
+facebook: "https://www.facebook.com/bangkokinspire"
+member_sign_in: "https://forms.inspire-networking.com/"
+
+# Technical values. Change these only with the guide for account owners.
+form_key: "92ba0502-49bb-483e-b942-efdb46bc3e1e"
+analytics_id: "G-66YWLGK7TT"
+live_address: "inspire-networking.com"
+allow_search_engines: false

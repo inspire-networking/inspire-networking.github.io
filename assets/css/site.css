@@ -1,0 +1,111 @@
+/* Colours and type come from the approved design. Editors don't need to change this file. */
+@font-face {
+  font-family: Manrope;
+  src: url("../fonts/manrope-latin.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --green: #00653e;
+  --blue: #0468bf;
+  --grey: #404040;
+  --ink: #1b2320;
+  --ink-soft: #4a5652;
+  --tint: #f2f6f4;
+  --rule: #d5ddd9;
+  --field: #6b7772;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--ink);
+  font-family: Manrope, system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+img { max-width: 100%; }
+a { color: var(--blue); }
+a:hover { color: var(--green); }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.wrap {
+  max-width: 1312px;
+  margin-inline: auto;
+  padding-inline: clamp(20px, 5vw, 64px);
+}
+
+.site-header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 32px;
+  padding-block: 14px;
+}
+.site-logo { display: block; width: auto; height: 72px; }
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 26px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.site-nav a { color: var(--ink); text-decoration: none; }
+.site-nav a.is-current { color: var(--green); border-bottom: 2px solid var(--green); }
+.site-nav a.site-nav__contact {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 2px solid var(--green);
+  color: var(--green);
+  font-weight: 700;
+}
+.site-nav a.site-nav__contact.is-current { background: var(--green); color: #fff; }
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 52px;
+  padding: 0 28px;
+  border: 0;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button--light, .button--light:hover { background: #fff; color: var(--green); }
+.button--solid, .button--solid:hover { background: var(--green); color: #fff; }
+
+.next-step { background: var(--green); color: #fff; }
+.next-step__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px 64px;
+  padding-block: clamp(56px, 7vw, 88px);
+}
+.next-step__text { flex: 999 1 560px; min-width: 0; }
+.next-step h2 {
+  margin: 0 0 12px;
+  font-size: clamp(30px, 3.4vw, 44px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+.next-step p { margin: 0; max-width: 40em; }
+
+.site-footer { background: var(--ink); color: var(--tint); font-size: 15px; }
+.site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px 48px;
+  padding-block: 32px;
+}
+.site-footer strong { display: block; font-weight: 700; }
+.site-footer__nav { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 8px 22px; }
+.site-footer a { color: var(--tint); }

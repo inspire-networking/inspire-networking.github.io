@@ -1,0 +1,9 @@
+{% assign s = site.data.settings %}<section class="next-step">
+  <div class="wrap next-step__inner">
+    <div class="next-step__text">
+      <h2>See Inspire for yourself</h2>
+      <p>{{ s.guest_rule }} We meet every {{ s.meeting_day }}, {{ s.meeting_start }} to {{ s.meeting_end }}, at the {{ s.venue_name }}, {{ s.venue_street }}, {{ s.venue_city }}.</p>
+    </div>
+    <a class="button button--light" href="{{ '/contact-inspire/' | relative_url }}">Arrange a visit</a>
+  </div>
+</section>

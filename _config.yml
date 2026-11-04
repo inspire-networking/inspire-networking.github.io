@@ -1,0 +1,29 @@
+# Technical settings. Editors don't need to change this file.
+title: Inspire Networking Group
+description: A professional community of business leaders in Bangkok, helping each other grow through collaboration, referrals and shared knowledge.
+url: https://inspire-networking.github.io
+lang: en
+locale: en_GB
+timezone: Asia/Bangkok
+markdown: kramdown
+strict_front_matter: true
+future: true
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-redirect-from
+collections:
+  members:
+    output: false
+  news:
+    output: true
+    permalink: /:name/
+defaults:
+  - scope: { path: pages }
+    values: { layout: page }
+  - scope: { type: news }
+    values: { layout: article, nav: news }
+exclude:
+  - README.md
+  - help/
+  - assets/fonts/OFL.txt

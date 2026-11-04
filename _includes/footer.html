@@ -1,0 +1,13 @@
+{% assign s = site.data.settings %}<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div><strong>{{ site.title }}</strong>{{ s.venue_name }}, {{ s.venue_street }}, {{ s.venue_city }}<br>{{ s.meeting_day }}s, {{ s.meeting_start }} to {{ s.meeting_end }}</div>
+    <nav class="site-footer__nav" aria-label="Footer">
+      {% for item in site.data.navigation %}{% unless item.key == 'home' %}<a href="{{ item.url | relative_url }}">{{ item.label }}</a>
+      {% endunless %}{% endfor %}<a href="{{ '/contact-inspire/' | relative_url }}">Contact</a>
+      <a href="{{ s.member_sign_in }}">Member sign in</a>
+      <a href="{{ s.linkedin }}">LinkedIn</a>
+      <a href="{{ s.facebook }}">Facebook</a>
+      <a href="{{ '/privacy/' | relative_url }}">Privacy</a>
+    </nav>
+  </div>
+</footer>

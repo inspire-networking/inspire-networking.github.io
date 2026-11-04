@@ -1,0 +1,5 @@
+- { key: home, label: Home, url: / }
+- { key: about, label: About, url: /about-us-inspire/ }
+- { key: members, label: Members, url: /inspire-members/ }
+- { key: membership, label: Membership, url: /membership/ }
+- { key: news, label: News, url: /news/ }
