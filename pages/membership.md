@@ -3,6 +3,7 @@ title: "Membership"
 permalink: /membership/
 nav: membership
 photo: /images/pages/membership.jpg
+photo_position: "center 56%"
 photo_alt: "Inspire members standing together in a hotel courtyard."
 intro: "One member per profession, a meeting every Friday and referrals from colleagues who know your work. Every member starts as a guest."
 button_text: "Arrange a visit"
