@@ -15,5 +15,7 @@
 {{ content }}
 </main>
 {% include footer.html %}
+{% include cookie-banner.html %}
+<script src="{{ '/assets/js/site.js' | relative_url }}" data-analytics="{{ site.data.settings.analytics_id }}" data-live="{{ site.data.settings.live_address }}" defer></script>
 </body>
 </html>

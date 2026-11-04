@@ -1,0 +1,15 @@
+---
+layout: default
+---
+{% include page-top.html %}
+<section class="band">
+  <div class="wrap stack stack--news">
+    <h2>{{ page.list_heading }}</h2>
+    <div class="news-grid">
+      {% assign articles = site.news | sort: 'date' | reverse %}
+      {% for a in articles %}{% include news-card.html article=a %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% include next-step.html %}

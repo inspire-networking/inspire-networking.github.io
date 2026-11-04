@@ -1,0 +1,47 @@
+---
+layout: default
+---
+{% assign s = site.data.settings %}{% include page-top.html %}
+<section class="band">
+  <div class="wrap contact-layout">
+    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <h2>Send us a message</h2>
+      <input type="hidden" name="access_key" value="{{ s.form_key }}">
+      <input type="hidden" name="subject" value="New message from the Inspire website">
+      <input type="hidden" name="from_name" value="Inspire website">
+      <div class="trap" aria-hidden="true"><label>Leave this empty <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></div>
+      <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="6" required></textarea></div>
+      <p class="contact-form__note">We use your details to reply to you and to arrange any visit you ask for. See our <a href="{{ '/privacy/' | relative_url }}">privacy policy</a>.</p>
+      <button class="button button--solid" type="submit">Send</button>
+      <p class="contact-form__status" role="status" hidden></p>
+    </form>
+    <aside class="contact-side">
+      <div>
+        <h2>Where and when we meet</h2>
+        <p><strong>Every {{ s.meeting_day }}, {{ s.meeting_start }} to {{ s.meeting_end }}</strong><br>{{ s.venue_name }}<br>{{ s.venue_street }}, {{ s.venue_area }}</p>
+      </div>
+      <div>
+        <h2>Follow us</h2>
+        <p class="contact-side__links"><a href="{{ s.linkedin }}">LinkedIn</a><a href="{{ s.facebook }}">Facebook</a></p>
+      </div>
+      <div>
+        <h2>Members</h2>
+        <p class="contact-side__links"><a href="{{ s.member_sign_in }}">Member sign in</a></p>
+      </div>
+    </aside>
+  </div>
+</section>
+<section class="band band--tint">
+  <div class="wrap map-section">
+    {% capture place %}{{ s.venue_name }} {{ s.venue_street }} {{ s.venue_city }}{% endcapture %}
+    <div class="map-box" data-map-query="{{ place | url_encode }}">
+      <p class="map-box__note" hidden>The map loads from Google when you choose to show it.</p>
+      <div class="map-box__actions">
+        <button class="button button--solid map-box__show" type="button" hidden>Show map</button>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query={{ place | url_encode }}">Open in Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>

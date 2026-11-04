@@ -1,7 +1,26 @@
 ---
 layout: default
 ---
-<article class="wrap prose">
-<h1>{{ page.title }}</h1>
-{{ content }}
-</article>
+<section class="page-band">
+  <div class="wrap article-top">
+    <a href="{{ '/news/' | relative_url }}">Back to News</a>
+    <h1>{{ page.title }}</h1>
+    <p class="article-top__meta">{{ page.label | default: 'Member spotlight' }}, {{ page.date | date: '%-d %B %Y' }}</p>
+  </div>
+</section>
+<section class="band">
+  <div class="wrap article-layout">
+    <article class="article-body">{{ content }}</article>
+    <aside class="article-side">
+      {% assign member = site.members | where_exp: 'x', 'x.path contains page.member' | first %}{% if page.member and page.member != '' and member %}{% include member-card.html member=member heading='h2' %}
+      {% else %}{% assign image_path = page.image | default: 'none' %}{% assign image_file = site.static_files | where: 'path', image_path | first %}{% if image_file %}<img class="article-side__image" src="{{ page.image | relative_url }}" alt="">{% endif %}{% endif %}
+      <div class="link-list link-list--small">
+        <h2>More from Inspire</h2>
+        {% assign others = site.news | sort: 'date' | reverse %}{% assign shown = 0 %}
+        {% for a in others %}{% if a.url != page.url and shown < 2 %}<div><a href="{{ a.url | relative_url }}">{{ a.title }}</a></div>{% assign shown = shown | plus: 1 %}{% endif %}{% endfor %}
+        <div><a class="link-list__all" href="{{ '/news/' | relative_url }}">See all news</a></div>
+      </div>
+    </aside>
+  </div>
+</section>
+{% include next-step.html %}

@@ -1,0 +1,28 @@
+{% assign parts = include.text | split: '<h2' %}
+{% for part in parts %}
+{% if forloop.first %}{% assign lead = part | strip %}{% if lead != '' %}<section class="band"><div class="wrap prose">{{ part }}</div></section>{% endif %}{% continue %}{% endif %}
+{% assign n = forloop.index0 %}
+{% assign pieces = part | split: '</h2>' %}
+{% assign heading = pieces[0] %}
+{% assign body = part | remove_first: heading | remove_first: '</h2>' %}
+{% if page.card_sections contains n or page.figure_sections contains n or page.pillar_sections contains n or page.step_sections contains n %}
+{% assign kind = '' %}{% if page.figure_sections contains n %}{% assign kind = 'cards--figures' %}{% elsif page.pillar_sections contains n %}{% assign kind = 'cards--pillars' %}{% elsif page.step_sections contains n %}{% assign kind = 'cards--steps' %}{% endif %}
+<section class="band{% unless page.step_sections contains n %} band--tint{% endunless %}">
+  <div class="wrap stack{% if page.pillar_sections contains n %} stack--pillars{% endif %}">
+    <h2{% if page.pillar_sections contains n %} class="visually-hidden"{% endif %}{{ heading }}</h2>
+    {% assign cards = body | split: '<h3' %}
+    <div class="cards {{ kind }}">
+      {% for card in cards %}{% if forloop.first %}{% continue %}{% endif %}<div class="card"><h3{{ card }}</div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% else %}
+<section class="band{% if page.tint_sections contains n %} band--tint{% endif %}">
+  <div class="wrap split">
+    <h2{{ heading }}</h2>
+    <div class="split__body">{{ body }}</div>
+  </div>
+</section>
+{% endif %}
+{% endfor %}

@@ -1,0 +1,5 @@
+{% assign a = include.article %}{% assign image_path = a.image | default: 'none' %}{% assign image_file = site.static_files | where: 'path', image_path | first %}<a class="news-card" href="{{ a.url | relative_url }}">
+  {% if image_file %}<img src="{{ a.image | relative_url }}" alt="" loading="lazy">{% else %}<span class="placeholder placeholder--wide"><img src="{{ '/images/brand/inspire-logo.png' | relative_url }}" alt=""></span>{% endif %}
+  <span class="news-card__date">{{ a.date | date: '%-d %B %Y' }}</span>
+  <span class="news-card__title">{{ a.title }}</span>
+</a>

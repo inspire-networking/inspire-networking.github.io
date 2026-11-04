@@ -1,0 +1,12 @@
+{% assign m = include.member %}{% assign photo_path = m.photo | default: 'none' %}{% assign photo_file = site.static_files | where: 'path', photo_path | first %}<div class="member-card">
+  {% if photo_file %}<img class="member-card__photo" src="{{ m.photo | relative_url }}" alt="{{ m.name }}" loading="lazy">{% else %}<div class="placeholder"><img src="{{ '/images/brand/inspire-logo.png' | relative_url }}" alt=""></div>{% endif %}
+  <div class="member-card__body">
+    {% assign logo_path = m.logo | default: 'none' %}{% assign logo_file = site.static_files | where: 'path', logo_path | first %}{% if logo_file %}<img class="member-card__logo" src="{{ m.logo | relative_url }}" alt="{{ m.business }} logo" loading="lazy">{% endif %}
+    <div>
+      <{{ include.heading | default: 'h2' }} class="member-card__name">{{ m.name }}</{{ include.heading | default: 'h2' }}>
+      <p class="member-card__role">{% if m.role and m.role != '' %}{{ m.role }}{% if m.business and m.business != '' %}, {% endif %}{% endif %}{{ m.business }}</p>
+    </div>
+    {% assign about = m.content | strip %}{% if about != '' %}<div class="member-card__about">{{ m.content | markdownify }}</div>{% endif %}
+    {% if m.website and m.website != '' %}{% assign label = m.website | remove: 'https://' | remove: 'http://' | remove: 'www.' | split: '/' | first %}<a class="member-card__link" href="{{ m.website }}">{{ m.website_label | default: label }}</a>{% endif %}
+  </div>
+</div>

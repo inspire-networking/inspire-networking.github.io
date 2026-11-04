@@ -1,0 +1,14 @@
+---
+layout: default
+---
+{% include page-top.html %}
+<section class="band">
+  <div class="wrap card-section">
+    <div class="member-grid">
+      {% assign members = site.members | sort_natural: 'business' %}
+      {% for m in members %}<article>{% include member-card.html member=m %}</article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% include next-step.html %}

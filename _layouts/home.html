@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<section class="home-hero">
+  <img class="home-hero__photo" src="{{ page.photo | relative_url }}" alt="{{ page.photo_alt }}">
+  <div class="wrap">
+    <div class="home-hero__panel">
+      <h1>{{ site.title }}</h1>
+      <p class="home-hero__tagline">{{ page.tagline }}</p>
+      <p>{{ page.intro }}</p>
+      <a class="button button--light" href="{{ '/contact-inspire/' | relative_url }}">Arrange a visit</a>
+    </div>
+  </div>
+</section>
+{% include sections.html text=content %}
+<section class="band band--tint">
+  <div class="wrap stack">
+    <div class="title-row">
+      <h2>Our members</h2>
+      <a href="{{ '/inspire-members/' | relative_url }}">Meet all our members</a>
+    </div>
+    <div class="logo-grid">
+      {% assign featured = site.members | where: 'featured', true | sort_natural: 'business' %}
+      {% for m in featured limit: 6 %}<div>
+        <div class="logo-grid__tile"><img src="{{ m.logo | relative_url }}" alt="{{ m.business }} logo"></div>
+        <span>{{ m.name }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<section class="band">
+  <div class="wrap split split--tight">
+    <div class="split__title">
+      <h2>News</h2>
+      <a href="{{ '/news/' | relative_url }}">See all</a>
+    </div>
+    <div class="split__body link-list">
+      {% assign newest = site.news | sort: 'date' | reverse %}
+      {% for a in newest limit: 3 %}<div><a href="{{ a.url | relative_url }}">{{ a.title }}</a></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% include next-step.html %}
