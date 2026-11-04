@@ -1,10 +1,10 @@
 <header class="site-header">
   <div class="wrap site-header__inner">
-    <a href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home"><img class="site-logo" src="{{ '/images/brand/inspire-logo.png' | relative_url }}" alt="iNSPIRE. Give. Grow. Gain." width="900" height="226"></a>
-    <nav class="site-nav" aria-label="Main">
-      {% for item in site.data.navigation %}<a href="{{ item.url | relative_url }}"{% if page.nav == item.key %} class="is-current"{% if page.layout != 'article' %} aria-current="page"{% endif %}{% endif %}>{{ item.label }}</a>
-      {% endfor %}<a href="{{ site.data.settings.member_sign_in }}">Member sign in</a>
-      <a class="site-nav__contact{% if page.nav == 'contact' %} is-current{% endif %}" href="{{ '/contact-inspire/' | relative_url }}"{% if page.nav == 'contact' %} aria-current="page"{% endif %}>Contact us</a>
-    </nav>
+    <a class="site-logo-link" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home"><img class="site-logo" src="{{ '/images/brand/inspire-logo.png' | relative_url }}" alt="iNSPIRE. Give. Grow. Gain." width="600" height="198"></a>
+    <details class="site-menu">
+      <summary class="site-menu__button"><span class="site-menu__icon" aria-hidden="true"></span>Menu</summary>
+      {% include site-nav.html %}
+    </details>
+    <div class="site-menu-wide">{% include site-nav.html %}</div>
   </div>
 </header>

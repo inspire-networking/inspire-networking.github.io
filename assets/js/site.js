@@ -41,6 +41,22 @@
     });
   }
 
+  // Every link to another website opens in a new tab.
+  Array.prototype.forEach.call(document.querySelectorAll('a[href^="http"]'), function (link) {
+    if (link.hostname === location.hostname) return;
+    link.target = '_blank';
+    link.rel = 'noopener';
+  });
+
+  // The phone menu closes when you tap elsewhere or press Escape.
+  var menu = document.querySelector('.site-menu');
+  document.addEventListener('click', function (event) {
+    if (menu.open && !menu.contains(event.target)) menu.open = false;
+  });
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && menu.open) { menu.open = false; menu.querySelector('summary').focus(); }
+  });
+
   var banner = document.querySelector('.cookie-banner');
   var choice = readChoice();
   if (choice === 'accepted') startAnalytics();

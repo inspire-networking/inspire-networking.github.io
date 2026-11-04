@@ -1,0 +1,5 @@
+<nav class="site-nav" aria-label="Main">
+  {% for item in site.data.navigation %}<a class="site-nav__link{% if page.nav == item.key %} is-current{% endif %}" href="{{ item.url | relative_url }}"{% if page.nav == item.key and page.layout != 'article' %} aria-current="page"{% endif %}>{{ item.label }}</a>
+  {% endfor %}<a class="site-nav__action" href="{{ site.data.settings.member_sign_in }}" target="_blank" rel="noopener">Sign in</a>
+  <a class="site-nav__action{% if page.nav == 'contact' %} is-current{% endif %}" href="{{ '/contact-inspire/' | relative_url }}"{% if page.nav == 'contact' %} aria-current="page"{% endif %}>Contact us</a>
+</nav>

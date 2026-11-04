@@ -1,5 +1,5 @@
 {% if page.photo %}<section class="page-hero">
-  <img class="page-hero__photo" src="{{ page.photo | relative_url }}" alt="{{ page.photo_alt }}">
+  <img class="page-hero__photo" src="{{ page.photo | relative_url }}" alt="{{ page.photo_alt }}"{% if page.photo_position %} style="--photo-position: {{ page.photo_position }}"{% endif %}>
   <div class="wrap">
     <div class="page-hero__panel">
       <h1>{{ page.heading | default: page.title }}</h1>
