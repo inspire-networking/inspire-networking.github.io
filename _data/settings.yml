@@ -1,6 +1,6 @@
 # Details used across the whole site. Keep the quote marks around each value.
 meeting_day: "Friday"
-meeting_start: "06:30"
+meeting_start: "07:00"
 meeting_end: "09:30"
 venue_name: "Mövenpick Hotel"
 venue_street: "47 Sukhumvit Soi 15"
