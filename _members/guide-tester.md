@@ -3,7 +3,7 @@ name: "Guide Tester"
 business: "AAA Guide Test: Ltd"
 role: ""
 website: "https://example.com"
-photo: ""
+photo: "/images/members/guide-tester.png"
 logo: ""
 featured: true
 ---
