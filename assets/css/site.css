@@ -465,3 +465,6 @@ main a:not(.button):not(.news-card) { transition: color 0.2s ease, text-decorati
   *, *::before, *::after { transition: none !important; }
   .button:hover, .site-nav__action:hover, .member-card:hover, .cookie-banner__button:hover { transform: none; }
 }
+@media (max-width: 360px) {
+  .site-logo { height: 46px; }
+}
