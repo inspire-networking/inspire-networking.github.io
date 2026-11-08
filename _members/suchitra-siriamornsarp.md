@@ -5,5 +5,6 @@ role: ""
 website: "https://www.rimiwealth.com"
 photo: "/images/members/suchitra-siriamornsarp.jpg"
 logo: "/images/members/suchitra-siriamornsarp-logo.png"
+featured: true
 ---
 

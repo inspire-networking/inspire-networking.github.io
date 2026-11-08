@@ -1,6 +1,6 @@
 # Choose members on Home
 
-The home page shows up to 6 members, in alphabetical order by business. A member appears if their file has this line:
+The home page shows up to 7 members, in alphabetical order by business. A member appears if their file has this line:
 
 ```
 featured: true
@@ -15,6 +15,6 @@ featured: true
 
 **To take a member off Home:** delete that line in the same way.
 
-Keep it to 6 at a time. If more are marked, only the first 6 alphabetically appear.
+Keep it to 7 at a time. If more are marked, only the first 7 alphabetically appear.
 
 A few minutes later, check the [home page](https://inspire-networking.github.io/).

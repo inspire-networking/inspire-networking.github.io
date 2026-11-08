@@ -19,6 +19,9 @@ redirect_from:
   - /kosmo-resto-and-bar/
   - /mama-dolores-with-inspire-networking/
   - /carmina/
+  - /christopher-lampert/
+  - /goldfishseo-antony-bell/
+  - /alcami/
   - /category/event/
   - /category/member-10-min-presentation/
   - /category/member-spotlight/

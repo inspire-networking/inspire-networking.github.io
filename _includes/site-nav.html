@@ -4,7 +4,8 @@
     {% endfor %}
   </div>
   <div class="site-nav__actions">
-    <a class="site-nav__action site-nav__action--quiet" href="{{ site.data.settings.member_sign_in }}" target="_blank" rel="noopener">Sign in</a>
+    <a class="site-nav__action site-nav__action--quiet" href="{{ site.data.settings.member_sign_in }}" target="_blank" rel="noopener">Member Sign In</a>
+    <a class="site-nav__action site-nav__action--quiet" href="{{ '/membership/' | relative_url }}">Become a member</a>
     <a class="site-nav__action site-nav__action--main" href="{{ '/contact-inspire/' | relative_url }}"{% if page.nav == 'contact' %} aria-current="page"{% endif %}>Contact us</a>
   </div>
 </nav>

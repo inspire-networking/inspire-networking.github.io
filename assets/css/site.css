@@ -120,7 +120,7 @@ a:hover { color: var(--green); }
 .site-menu[open] .site-menu__icon { background: transparent; }
 .site-menu[open] .site-menu__icon::before { background: var(--ink); transform: rotate(45deg); }
 .site-menu[open] .site-menu__icon::after { background: var(--ink); transform: rotate(-45deg); }
-@media (max-width: 1100px) {
+@media (max-width: 1279px) {
   .site-header__inner { padding-block: 10px; }
   .site-logo { height: 48px; }
   .site-menu { display: block; }
@@ -151,7 +151,11 @@ a:hover { color: var(--green); }
   .site-menu .site-nav__link:hover { padding-left: 18px; }
   .site-menu .site-nav__link.is-current { border-left-color: var(--green); }
   .site-menu .site-nav__actions { display: grid; grid-template-columns: 1fr 1fr; margin-top: 18px; }
+  .site-menu .site-nav__action--main { grid-column: 1 / -1; }
   .site-menu .site-nav__action { min-height: 48px; }
+}
+@media (max-width: 480px) {
+  .site-menu .site-nav__actions { grid-template-columns: 1fr; }
 }
 
 .button {
@@ -281,7 +285,7 @@ a:hover { color: var(--green); }
 .home-hero__photo {
   display: block;
   width: 100%;
-  height: clamp(300px, 54vw, 780px);
+  height: clamp(220px, 40vw, 800px);
   object-fit: cover;
   object-position: center 40%;
 }
@@ -332,7 +336,7 @@ a:hover { color: var(--green); }
 }
 .band--steps .stack { padding-block: clamp(56px, 7vw, 96px); }
 
-.logo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(190px, 44%), 1fr)); gap: 24px 14px; }
+.logo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(150px, 44%), 1fr)); gap: 24px 14px; }
 .logo-grid__tile { display: flex; align-items: center; justify-content: center; height: 112px; padding: 14px; background: #fff; }
 .logo-grid__tile img { max-height: 80px; }
 .logo-grid span { display: block; margin-top: 8px; font-size: 15px; font-weight: 600; }

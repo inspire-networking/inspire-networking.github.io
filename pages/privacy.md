@@ -54,4 +54,4 @@ Under the PDPA, you can ask us to give you access to your personal data, correct
 
 ## Other websites
 
-The Sign in link and links to members' websites, LinkedIn and Facebook take you to separate sites that this policy doesn't cover.
+The Member Sign In link and links to members' websites, LinkedIn and Facebook take you to separate sites that this policy doesn't cover.

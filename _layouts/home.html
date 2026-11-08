@@ -21,7 +21,7 @@ layout: default
     </div>
     <div class="logo-grid">
       {% assign featured = site.members | where: 'featured', true | sort_natural: 'business' %}
-      {% for m in featured limit: 6 %}<div>
+      {% for m in featured limit: 7 %}<div>
         <div class="logo-grid__tile"><img src="{{ m.logo | relative_url }}" alt="{{ m.business }} logo"></div>
         <span>{{ m.name }}</span>
       </div>

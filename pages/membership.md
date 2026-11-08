@@ -3,8 +3,7 @@ title: "Membership"
 permalink: /membership/
 nav: membership
 photo: /images/pages/membership.jpg
-photo_position: "center 56%"
-photo_alt: "Inspire members standing together in a hotel courtyard."
+photo_alt: "Business people seated at long tables in a hotel function room, listening to a speaker."
 intro: "One member per profession, a meeting every Friday and referrals from colleagues who know your work. Every member starts as a guest."
 button_text: "Arrange a visit"
 button_link: /contact-inspire/
@@ -28,14 +27,11 @@ If your profession is open and Inspire is right for you, you become a member. We
 
 ## Fees
 
-Inspire is a not-for-profit organisation and doesn't look to make money from its fees.
-
 | Fee | Amount | When |
 |---|---|---|
 | Joining fee | 10,000 THB | Covers your first year |
 | Renewal fee | 5,000 THB | After one year of membership |
-| Breakfast fee | 2,500 THB | Paid monthly |
-| Events | Free | For members and partners |
+| Breakfast fee | 500 THB | Per meeting paid bi-monthly |
 
 Annual fees pay for our events during the year. The breakfast fee goes to the hotel for members' breakfasts. Guests who attend an event are charged a fee to cover its cost.
 

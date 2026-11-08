@@ -5,5 +5,6 @@ role: "Managing Partner"
 website: "https://nexcellence.me"
 photo: "/images/members/nassim-abed.jpg"
 logo: "/images/members/nassim-abed-logo.png"
+featured: true
 ---
 Consultancy and capability development in strategic planning and operational excellence.

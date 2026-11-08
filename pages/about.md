@@ -1,14 +1,18 @@
 ---
 title: "About"
-heading: "About Inspire"
+heading: "Inspire: Our Mission"
 permalink: /about-us-inspire/
 nav: about
 photo: /images/pages/about.jpg
-photo_alt: "An Inspire member addressing a room of business people at the Business Open Day."
+photo_alt: "Business people seated at long tables in a hotel function room, listening to a speaker."
 intro: "Our mission is to connect, empower and elevate professionals across industries by fostering meaningful relationships, sharing knowledge and creating opportunities for growth."
-card_sections: [2]
+card_sections: [3]
 figure_sections: [4]
 ---
+
+## Our vision
+
+We envision a thriving professional community where individuals and businesses in Bangkok come together to innovate, inspire and make a lasting impact.
 
 ## Who we are
 
@@ -22,31 +26,27 @@ We provide a space for members to connect, exchange ideas and form valuable part
 
 ### Foster growth
 
-Through mentorship, training and shared experiences, we help members achieve personal and professional success.
+Through mentorship, guidance and sharing experience, we help members achieve personal and professional success.
 
 ### Host events
 
-From workshops and speaker sessions to panel discussions and networking evenings, our events are designed to inspire and educate.
+From workshops and speaker sessions to networking evenings, our events are designed to inspire and educate.
 
-## Our vision
+## Since we started
 
-We envision a thriving professional community where individuals and businesses in Bangkok come together to innovate, inspire and make a lasting impact.
-
-## What we achieved in 2025
-
-### 25
+### 130
 
 **Members**
 
 Our members are from many different countries around the world.
 
-### 700
+### 7000
 
 **Referrals**
 
 The referrals we pass are from each member's individual network.
 
-### 15M THB
+### 60M THB
 
 **Business given**
 

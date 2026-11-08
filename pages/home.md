@@ -4,7 +4,7 @@ permalink: /
 layout: home
 nav: home
 photo: /images/pages/home.jpg
-photo_alt: "About thirty Inspire members standing together in a hotel courtyard."
+photo_alt: "Inspire members standing together in a hotel courtyard."
 tagline: "Give. Grow. Gain."
 intro: "A professional community of business leaders in Bangkok, helping each other grow through collaboration, referrals and shared knowledge."
 pillar_sections: [2]
